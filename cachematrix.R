@@ -1,10 +1,21 @@
-## Put comments here that give an overall description of what your
-## functions do
+## overall description of what your the functions defined below
 
-## Write a short comment describing this function
+## Set of  functions to accelerate computation of matrix inversion
+## by computing the inverse of a matrix object the first time and then
+## caching the result for use in subsequent calls to compute inverse
 
-# Creates a cache list of the inverse of a given matrix
-# cache the value of the inverse of the matrix
+## Usage
+## a <- matrix(sample(100), nrow = 10, ncol = 10)
+## acache <- makeCacheMatrix(a)
+## cacheSolve(acache) --> Will compute inverse and store it in cache
+## cacheSolve(acache) --> Will get inverse from cache
+
+
+
+## Short comment describing this function
+## Creates a list to store a matrix and its inverse
+## provides methods to set and get the original matrix and methods
+## to set and get the inverse of the original matrix
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
     set <- function(y) {
@@ -20,8 +31,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
-## Returns the inverse of a matri. When called for the first time
+## Short comment describing this function
+## Returns the inverse of a matrix. When called for the first time
 ## on a matrix, the inverse is calculated and stored in a cache 
 ## list and the result is returned. For subsequent calls for the
 ## same / identical matrix the value computed earlier is returned
