@@ -1,4 +1,4 @@
-## overall description of what your the functions defined below
+## overall description of the functions defined below
 
 ## Set of  functions to accelerate computation of matrix inversion
 ## by computing the inverse of a matrix object the first time and then
